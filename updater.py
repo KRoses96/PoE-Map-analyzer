@@ -13,8 +13,6 @@ while ans == 'Y':
     a = input('Map number: ')
 
     b = int(a)
-    c = b + 1
-    d = str(c)
     cards = input('Cards: ')
     exalts=input('Exalts: ')
     chaos =input('Chaos: ')
