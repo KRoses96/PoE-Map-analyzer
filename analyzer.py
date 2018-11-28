@@ -6,7 +6,8 @@ df
 ansre = 'Y'
 while ansre == 'Y':
 
-    print("""1.Chaos
+    print("""
+    1.Chaos
     2.Card
     3.Exalt
     4.Fuses
@@ -19,6 +20,7 @@ while ansre == 'Y':
 
     if plotans == '1':
         df.plot(y= 'Chaos',x ='Map#')
+
     if plotans =='2':
         df.plot(y = 'Card',x ='Map#')
     if plotans =='3':
