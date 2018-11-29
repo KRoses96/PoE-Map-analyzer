@@ -21,7 +21,10 @@ while ansre == 'Y':
     plotans = input('Which currency do you want to get info on(1-8): ')
     to_grp = [df.index.any]
     if plotans == '1':
+<<<<<<< HEAD
         #chaos information
+=======
+>>>>>>> 482c17b7da01d681e3baaa759b52551c40d830f8
         df.plot.line(y= 'Chaos',x ='Map#')
         df.plot.box(y='Chaos',x='Map#')
         grp = df.groupby(to_grp,squeeze = True)['Chaos'].agg(['min', 'mean', 'max'])
@@ -71,7 +74,11 @@ while ansre == 'Y':
         print(grp.head())
         plt.show()
     if plotans == '8':
+<<<<<<< HEAD
         #shows info on all
+=======
+>>>>>>> 482c17b7da01d681e3baaa759b52551c40d830f8
         df.plot.line(x= 'Map#')
         plt.show()
     ansre = input('Would you like to check any other currency?(Y/N)')
+    

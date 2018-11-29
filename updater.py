@@ -1,7 +1,10 @@
 import xlwt
 import xlrd
 from xlutils.copy import copy
+<<<<<<< HEAD
 #shows latest saved ratios in the txt files
+=======
+>>>>>>> 482c17b7da01d681e3baaa759b52551c40d830f8
 print('LATEST RATIOS:')
 print('Exalt Ratio:')
 file3 = open('exaltrat.txt','r')
@@ -9,7 +12,10 @@ print(file3.read())
 print('Card Ratio:')
 file2 = open('cardrat.txt','r') #autocheck
 print(file2.read())
+<<<<<<< HEAD
 #imports ratios in case you changed them in the menu
+=======
+>>>>>>> 482c17b7da01d681e3baaa759b52551c40d830f8
 import ratios
 from ratios import *
 ans = 'Y'
@@ -31,7 +37,10 @@ while ans == 'Y':
     returns = int(input('Returns: '))
     misc = int(input('Misc: '))
     reroll = int(input('Reroll: '))
+<<<<<<< HEAD
 #calculates the total in chaos from the map
+=======
+>>>>>>> 482c17b7da01d681e3baaa759b52551c40d830f8
     totalc = cards*cardrat + exalts*exaltrat + chaos + fuses*1/2 + jews*1/8 + misc - reroll
     w_sheet.write(Map_num,0,map)
     w_sheet.write(Map_num,1,cards)
