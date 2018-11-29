@@ -1,6 +1,15 @@
 import xlwt
 import xlrd
 from xlutils.copy import copy
+print('LATEST RATIOS:')
+print('Exalt Ratio:')
+file3 = open('exaltrat.txt','r')
+print(file3.read())
+print('Card Ratio:')
+file2 = open('cardrat.txt','r') #autocheck
+print(file2.read())
+import ratios
+from ratios import *
 ans = 'Y'
 while ans == 'Y':
 
@@ -12,15 +21,15 @@ while ans == 'Y':
 
     map = input('Map number: ')
     Map_num = int(map)
-    cards = input('Cards: ')
-    exalts=input('Exalts: ')
-    chaos =input('Chaos: ')
-    fuses =input('Fuses: ')
-    jews = input('Jews: ')
-    returns = input('Returns: ')
-    misc = input('Misc: ')
-    reroll = input('Reroll: ')
-
+    cards = int(input('Cards: '))
+    exalts= int(input('Exalts: '))
+    chaos = int(input('Chaos: '))
+    fuses =int(input('Fuses: '))
+    jews = int(input('Jews: '))
+    returns = int(input('Returns: '))
+    misc = int(input('Misc: '))
+    reroll = int(input('Reroll: '))
+    totalc = cards*cardrat + exalts*exaltrat + chaos + fuses*1/2 + jews*1/8 + misc - reroll
     w_sheet.write(Map_num,0,map)
     w_sheet.write(Map_num,1,cards)
     w_sheet.write(Map_num,2,exalts)
@@ -30,6 +39,7 @@ while ans == 'Y':
     w_sheet.write(Map_num,6,returns)
     w_sheet.write(Map_num,7,misc)
     w_sheet.write(Map_num,8,reroll)
+    w_sheet.write(Map_num,9,totalc)
     wb.save('PoeDrops.xls')
 
     print('map',map,'saved')
