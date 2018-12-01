@@ -1,6 +1,0 @@
-1.Run updater to add map data into the excell.
-
-2.Run converter to transform excell data into a csv file so
-that you  an use the analyzer on and get your data organized.
-
-3.Test
